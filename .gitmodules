@@ -95,3 +95,6 @@
 [submodule "bundle/scratch.vim"]
 	path = bundle/scratch.vim
 	url = https://github.com/vim-scripts/scratch.vim.git
+[submodule "bundle/auto-ctags.vim"]
+	path = bundle/auto-ctags.vim
+	url = https://github.com/soramugi/auto-ctags.vim.git

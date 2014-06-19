@@ -98,3 +98,8 @@ let g:ConqueTerm_SendVisKey = '<Leader>e'
 " so it doesn't have to wait for \bd
 nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
 
+" Auto-ctags
+let g:auto_ctags = 1
+let g:auto_ctags_directory_list = ['.git', '.svn', '.hg']
+set tags=./tags,.git/tags,.svn/tags,.hg/tags
+

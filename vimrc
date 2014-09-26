@@ -35,7 +35,7 @@ if has('gui_running')
   if has("gui_macvim")
     set guifont=Source\ Code\ Pro\ for\ Powerline:h16
   else
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
   endif
 else
   colorscheme desert

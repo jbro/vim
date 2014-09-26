@@ -98,3 +98,6 @@
 [submodule "bundle/auto-ctags.vim"]
 	path = bundle/auto-ctags.vim
 	url = https://github.com/soramugi/auto-ctags.vim.git
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = https://github.com/tpope/vim-cucumber.git

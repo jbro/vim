@@ -48,10 +48,10 @@ if version >= 703
   set undodir^=~/.vim/undo
 endif
 
-" set expandtab
+set expandtab
 " set cindent
-" set shiftwidth=2
-" set tabstop=2
+set shiftwidth=2
+set tabstop=2
 
 set list listchars=tab:➝\ ,trail:·,extends:<,precedes:>
 

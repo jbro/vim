@@ -104,3 +104,6 @@
 [submodule "bundle/vim-sleuth"]
 	path = bundle/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "bundle/plsql--Lysyonok.vim"]
+	path = bundle/plsql--Lysyonok.vim
+	url = https://github.com/vim-scripts/plsql.vim--Lysyonok.git

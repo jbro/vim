@@ -60,8 +60,6 @@ set nowrap
 set foldmethod=syntax
 set nofoldenable
 
-command! -bar -nargs=0 W :silent exe "write !sudo tee % >/dev/null"|silent edit!
-
 set wildmode=longest,list,full
 
 "Ruby stuff

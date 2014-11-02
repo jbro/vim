@@ -107,3 +107,6 @@
 [submodule "bundle/plsql--Lysyonok.vim"]
 	path = bundle/plsql--Lysyonok.vim
 	url = https://github.com/vim-scripts/plsql.vim--Lysyonok.git
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch

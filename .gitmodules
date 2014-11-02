@@ -82,9 +82,6 @@
 [submodule "bundle/vim-addon-local-vimrc"]
 	path = bundle/vim-addon-local-vimrc
 	url = https://github.com/MarcWeber/vim-addon-local-vimrc.git
-[submodule "bundle/vim-bitbake"]
-	path = bundle/vim-bitbake
-	url = https://github.com/kergoth/vim-bitbake.git
 [submodule "bundle/scratch.vim"]
 	path = bundle/scratch.vim
 	url = https://github.com/vim-scripts/scratch.vim.git

@@ -103,3 +103,6 @@
 [submodule "bundle/slimux"]
 	path = bundle/slimux
 	url = https://github.com/epeli/slimux.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git

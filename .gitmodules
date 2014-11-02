@@ -86,9 +86,6 @@
 [submodule "bundle/vim-addon-local-vimrc"]
 	path = bundle/vim-addon-local-vimrc
 	url = https://github.com/MarcWeber/vim-addon-local-vimrc.git
-[submodule "bundle/Rename"]
-	path = bundle/Rename
-	url = git://github.com/vim-scripts/Rename.git
 [submodule "bundle/vim-bitbake"]
 	path = bundle/vim-bitbake
 	url = https://github.com/kergoth/vim-bitbake.git

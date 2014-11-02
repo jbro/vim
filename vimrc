@@ -94,3 +94,6 @@ let g:auto_ctags = 1
 let g:auto_ctags_directory_list = ['.git', '.svn', '.hg']
 set tags=./tags,.git/tags,.svn/tags,.hg/tags
 
+" Slimux bindings
+map <Leader>s :SlimuxREPLSendLine<CR>
+vmap <Leader>s :SlimuxREPLSendSelection<CR>

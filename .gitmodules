@@ -110,3 +110,6 @@
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "bundle/slimux"]
+	path = bundle/slimux
+	url = https://github.com/epeli/slimux.git

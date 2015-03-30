@@ -8,6 +8,8 @@ function pull {
   # pull from git repo including initialised submodules
   echo "Pull in changes..."
   git pull --recurse-submodules
+  echo "Fast forwarding to head"
+  git submodule foreach "git pull origin master"
 }
 
 function init_subm {

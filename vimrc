@@ -17,6 +17,8 @@ set hlsearch
 
 set visualbell
 
+set number
+
 if has('gui_running')
   colorscheme solarized
   set background=dark
@@ -84,6 +86,9 @@ nmap \\u <Plug>CommentaryUndo
 " Map open buffers in Command-T to \bf
 " so it doesn't have to wait for \bd
 nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
+
+" Use git ls-files if availiable, this means command-t respects .gitignore
+let g:CommandTFileScanner = 'git'
 
 " Auto-ctags
 let g:auto_ctags = 1

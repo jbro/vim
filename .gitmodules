@@ -59,10 +59,6 @@
 	path = bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
   ignore = untracked
-[submodule "bundle/powerline"]
-	path = bundle/powerline
-	url = https://github.com/Lokaltog/powerline.git
-  ignore = untracked
 [submodule "fonts/powerline-fonts"]
 	path = fonts/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts
@@ -106,3 +102,6 @@
 [submodule "bundle/rainbow_parentheses"]
 	path = bundle/rainbow_parentheses
 	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/pgsql.vim"]
+	path = bundle/pgsql.vim
+	url = https://github.com/exu/pgsql.vim.git

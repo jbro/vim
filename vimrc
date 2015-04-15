@@ -89,6 +89,7 @@ nnoremap <silent> <Leader>bf :CommandTBuffer<CR>
 
 " Use git ls-files if availiable, this means command-t respects .gitignore
 let g:CommandTFileScanner = 'git'
+let g:CommandTMaxFiles = 200000
 
 " Auto-ctags
 let g:auto_ctags = 1

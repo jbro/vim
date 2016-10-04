@@ -12,7 +12,7 @@ Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 
 "Powerline
-Plug 'powerline/fonts', { 'dir': '~.vim/fonts/powerline', 'do': './install.sh' } |
+Plug 'powerline/fonts', { 'dir': '~/.vim/fonts/powerline', 'do': './install.sh' } |
   Plug 'powerline/powerline', { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' }
 
 "Change quoting

@@ -119,6 +119,3 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = g:plug_home . "/../tmp"
 
-"Where the local vimrc cache file is kept
-let g:local_vimrc = {'cache_file':$HOME.'/.vim/tmp/vim_local_rc_cache'}
-

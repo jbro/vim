@@ -12,7 +12,7 @@ Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 
 "Powerline
-Plug 'powerline/fonts', { 'dir': '~/.vim/fonts/powerline', 'do': './install.sh' } |
+Plug 'powerline/fonts', { 'dir': g:plug_home . '/../fonts/powerline', 'do': './install.sh' } |
   Plug 'powerline/powerline', { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' }
 
 "Change quoting
@@ -34,7 +34,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-unimpaired'
 
 "One of the only thins I've missed from Emacs
-Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p ~/.vim/tmp' }
+Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p ' . g:plug_home . '/../tmp' }
 
 "I like to know far I have to go
 Plug 'henrik/vim-indexed-search'
@@ -117,7 +117,7 @@ set wildmode=longest,list,full
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
-let g:yankring_history_dir = "~/.vim/tmp"
+let g:yankring_history_dir = g:plug_home . "/../tmp"
 
 "Where the local vimrc cache file is kept
 let g:local_vimrc = {'cache_file':$HOME.'/.vim/tmp/vim_local_rc_cache'}

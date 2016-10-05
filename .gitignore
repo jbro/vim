@@ -1,4 +1,3 @@
-autoload/
-fonts/
-plugged/
-tmp/
+*
+!README.md
+!vimrc

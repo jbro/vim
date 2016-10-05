@@ -51,7 +51,6 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
 "Git stuff
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/vim-git-log'
 
 call plug#end()
 

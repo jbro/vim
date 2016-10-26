@@ -18,7 +18,7 @@ Plug 'powerline/fonts', { 'dir': g:plug_home . '/../fonts/powerline', 'do': './i
 "Change quoting
 Plug 'tpope/vim-surround'
 
-"Don't ruin layoyt with buffer closes
+"Don't ruin layout with buffer closes
 Plug 'vim-scripts/kwbdi.vim'
 
 "Automatic syntax checking
@@ -30,7 +30,7 @@ Plug 'tpope/vim-commentary'
 "Toggle line numbers
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-"Nice mapping pairs from Tpope
+"Nice mapping pairs from tpope
 Plug 'tpope/vim-unimpaired'
 
 "One of the only thins I've missed from Emacs

@@ -4,6 +4,7 @@ set nocompatible
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  call mkdir(glob('~/.vim/') . 'spell/', 'p')
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
@@ -127,10 +128,6 @@ let g:yankring_history_dir = g:plug_home . "/../tmp"
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 
 "Spelling defaults
-let spell_dir = g:plug_home . '/../spell/'
-if !isdirectory(spell_dir)
-  call mkdir(spell_dir, 'p')
-endif
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell

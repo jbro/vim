@@ -1,14 +1,21 @@
 set nocompatible
 
+"Set $VIMDIR to ~/.vim if unset
+if empty($VIMDIR)
+  let $VIMDIR = glob('~') . '/.vim'
+else
+  let g:vimdir = $VIMDIR
+end
+
 "Install vimplug, if not present
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob($VIMDIR . '/autoload/plug.vim'))
+  silent !curl -fLo $VIMDIR/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  call mkdir(glob('~/.vim/') . 'spell/', 'p')
+  call mkdir($VIMDIR . '/spell', 'p')
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin($VIMDIR . '/plugged')
 "Well it's only sensible
 Plug 'tpope/vim-sensible'
 
@@ -16,7 +23,7 @@ Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 
 "Powerline
-Plug 'powerline/fonts', { 'dir': g:plug_home . '/../fonts/powerline', 'do': './install.sh' } |
+Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' } |
   Plug 'powerline/powerline', { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' }
 
 "Change quoting
@@ -38,7 +45,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-unimpaired'
 
 "One of the only thins I've missed from Emacs
-Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p ' . g:plug_home . '/../tmp' }
+Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p $VIMDIR/tmp' }
 
 "I like to know far I have to go
 Plug 'henrik/vim-indexed-search'
@@ -97,10 +104,10 @@ else
   let g:powerline_loaded = 1
 endif
 
-set backupdir^=~/.vim/backup
-set directory^=~/.vim/tmp
+set backupdir^=$VIMDIR/backup
+set directory^=$VIMDIR/tmp
 if version >= 703
-  set undodir^=~/.vim/undo
+  set undodir^=$VIMDIR/undo
 endif
 
 set expandtab
@@ -122,7 +129,7 @@ set nofoldenable
 let g:NumberToggleTrigger = "<F10>"
 
 "Where the yankring history file is kept
-let g:yankring_history_dir = g:plug_home . "/../tmp"
+let g:yankring_history_dir = $VIMDIR . "/tmp"
 
 "Insert date
 :inoremap <C-D> <C-R>=strftime("%F")<CR>

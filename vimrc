@@ -122,3 +122,6 @@ let g:NumberToggleTrigger = "<F10>"
 "Where the yankring history file is kept
 let g:yankring_history_dir = g:plug_home . "/../tmp"
 
+"Insert date
+:inoremap <C-D> <C-R>=strftime("%F")<CR>
+

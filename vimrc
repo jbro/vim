@@ -127,6 +127,10 @@ let g:yankring_history_dir = g:plug_home . "/../tmp"
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 
 "Spelling defaults
+let spell_dir = g:plug_home . '/../spell/'
+if !isdirectory(spell_dir)
+  call mkdir(spell_dir, 'p')
+endif
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell

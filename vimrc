@@ -1,9 +1,5 @@
 set nocompatible
 
-if $SHELL =~ 'fish'
-  set shell=/bin/sh
-endif
-
 call plug#begin('~/.vim/plugged')
 "Well it's only sensible
 Plug 'tpope/vim-sensible'
@@ -56,9 +52,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
-
-syntax on
-filetype plugin indent on
 
 set hidden
 
@@ -113,8 +106,6 @@ set nowrap
 
 set foldmethod=syntax
 set nofoldenable
-
-set wildmode=longest,list,full
 
 "Remap annoying numbertoggle, so it doesn't interfere with yankring
 let g:NumberToggleTrigger = "<F10>"

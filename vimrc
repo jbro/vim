@@ -49,6 +49,9 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
+"Fish syntax highlighting
+Plug 'dag/vim-fish', { 'for': 'fish' }
+
 "Git stuff
 Plug 'tpope/vim-fugitive'
 

@@ -11,6 +11,8 @@ On the terminal do:
 
     $ git clone https://github.com/jbro/vim.git .vim
     $ ln -s .vim/vimrc .vimrc
+    $ vim
 
-Start vim and vimplug automatically installs itself.
+Restart vim and you are good to go
+
 

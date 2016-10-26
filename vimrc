@@ -121,7 +121,7 @@ let g:yankring_history_dir = g:plug_home . "/../tmp"
 
 "Spelling defaults
 nmap <silent> <leader>s :set spell!<CR>
-set spelllang=en_gb
+set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 

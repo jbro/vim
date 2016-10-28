@@ -16,15 +16,21 @@ if empty(glob($VIMDIR . '/autoload/plug.vim'))
 endif
 
 call plug#begin($VIMDIR . '/plugged')
+"Trick for conditional activation [https://github.com/junegunn/vim-plug/wiki/faq#conditional-activation]
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 "Well it's only sensible
 Plug 'tpope/vim-sensible'
 
 "GUI colour scheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized', Cond(has('gui_running'))
 
 "Powerline
 Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' } |
-  Plug 'powerline/powerline', { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' }
+  Plug 'powerline/powerline', Cond(has('gui_running'), { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' })
 
 "Change quoting
 Plug 'tpope/vim-surround'
@@ -100,8 +106,6 @@ if has('gui_running')
 else
   colorscheme desert
   set nocursorline
-  "Trick powerline into thinking it is already loaded
-  let g:powerline_loaded = 1
 endif
 
 set backupdir^=$VIMDIR/backup

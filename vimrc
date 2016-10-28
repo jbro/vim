@@ -39,7 +39,13 @@ Plug 'tpope/vim-surround'
 Plug 'vim-scripts/kwbdi.vim'
 
 "Automatic syntax checking
-Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic', { 'on': [] }
+"Delay syntatic load until we aren't doing anything
+augroup LazySyntatic
+  autocmd!
+  autocmd CursorHold * :call plug#load('syntastic')
+  autocmd CursorHold * :autocmd! LazySyntatic
+augroup END
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

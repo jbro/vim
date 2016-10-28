@@ -72,6 +72,9 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 "Git stuff
 Plug 'tpope/vim-fugitive'
 
+"Scratch buffer
+Plug 'vim-scripts/scratch.vim'
+
 call plug#end()
 
 set hidden

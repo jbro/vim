@@ -9,9 +9,8 @@ Installation
 ------------
 On the terminal do:
 
-    $ git clone https://github.com/jbro/vim.git .vim
-    $ ln -s .vim/vimrc .vimrc
-    $ vim
+  $ git clone https://github.com/jbro/vim.git .vim
+  $ vim
 
 Restart vim and you are good to go
 

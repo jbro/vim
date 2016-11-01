@@ -152,3 +152,7 @@ set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
+"Fat fingers
+nmap <F1> <nop>
+imap <F1> <nop>
+

@@ -80,6 +80,10 @@ Plug 'tpope/vim-fugitive'
 "Scratch buffer
 Plug 'vim-scripts/scratch.vim'
 
+"Puppet
+Plug 'godlygeek/tabular' |
+  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+
 call plug#end()
 
 set hidden

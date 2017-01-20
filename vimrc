@@ -97,6 +97,9 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'godlygeek/tabular' |
   Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 
+"Nim
+Plug 'zah/nim.vim', { 'for': 'nim' }
+
 call plug#end()
 
 set hidden

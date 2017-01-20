@@ -50,7 +50,7 @@ augroup END
 "You complete me
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
-    silent !which cmake
+    let output = system('which cmake')
     if v:shell_error == 0
       !./install.py --clang-completer
     else

@@ -168,7 +168,6 @@ let g:yankring_history_dir = $VIMDIR . "/tmp"
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 
 "Spelling defaults
-nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell

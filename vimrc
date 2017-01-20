@@ -48,7 +48,9 @@ augroup LazySyntatic
 augroup END
 
 "You complete me
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+if !empty(glob($VIMDIR . '/enable_ycm'))
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+end
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

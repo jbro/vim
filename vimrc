@@ -165,6 +165,9 @@ endif
 "Where the yankring history file is kept
 let g:yankring_history_dir = $VIMDIR . "/tmp"
 
+"Force diff to use vertical split
+set diffopt+=vertical
+
 "Insert date
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 

@@ -80,18 +80,18 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'kien/rainbow_parentheses.vim'
 
+"Git stuff
+Plug 'tpope/vim-fugitive'
+
+"Scratch buffer
+Plug 'vim-scripts/scratch.vim'
+
 "Ruby stuff
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
 "Fish syntax highlighting
 Plug 'dag/vim-fish', { 'for': 'fish' }
-
-"Git stuff
-Plug 'tpope/vim-fugitive'
-
-"Scratch buffer
-Plug 'vim-scripts/scratch.vim'
 
 "Puppet
 Plug 'godlygeek/tabular' |

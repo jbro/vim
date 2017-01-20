@@ -49,12 +49,13 @@ augroup END
 
 "You complete me
 function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer
+    silent !which cmake
+    if v:shell_error == 0
+      !./install.py --clang-completer
+    else
+      !./install.py
+    end
   endif
 endfunction
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }

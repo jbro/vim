@@ -27,9 +27,10 @@ Plug 'tpope/vim-sensible'
 "GUI colour scheme
 Plug 'altercation/vim-colors-solarized', Cond(has('gui_running'))
 
-"Powerline
+"Airline
 Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' } |
-  Plug 'powerline/powerline', Cond(has('gui_running'), { 'tag': 'master', 'rtp': 'powerline/bindings/vim/' })
+  Plug 'vim-airline/vim-airline-themes' |
+  Plug 'bling/vim-airline'
 
 "Change quoting
 Plug 'tpope/vim-surround'
@@ -100,8 +101,9 @@ if has('gui_running')
   colorscheme solarized
   set background=dark
 
-  "Powerline theme
-  let g:powerline_config_overrides={"ext": {"vim": {"colorscheme": "solarized"}}}
+  " We have powerline fonts
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme = 'solarized'
 
   "Turn off tool bar
   set guioptions-=T
@@ -117,6 +119,7 @@ if has('gui_running')
   endif
 else
   colorscheme desert
+  let g:airline_theme = 'term'
   set nocursorline
 endif
 

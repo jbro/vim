@@ -48,17 +48,7 @@ augroup LazySyntatic
 augroup END
 
 "You complete me
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    let output = system('which cmake')
-    if v:shell_error == 0
-      !./install.py --clang-completer
-    else
-      !./install.py
-    end
-  endif
-endfunction
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

@@ -112,6 +112,9 @@ set visualbell
 
 set number
 
+"Remap annoying numbertoggle, so it doesn't interfere with yankring
+let g:NumberToggleTrigger = "<F10>"
+
 if has('gui_running')
   colorscheme solarized
   set background=dark
@@ -138,12 +141,6 @@ else
   set nocursorline
 endif
 
-set backupdir^=$VIMDIR/backup
-set directory^=$VIMDIR/tmp
-if version >= 703
-  set undodir^=$VIMDIR/undo
-endif
-
 set expandtab
 set shiftwidth=2
 set tabstop=2
@@ -159,9 +156,11 @@ set wildmode=longest,full
 set foldmethod=syntax
 set nofoldenable
 
-"Remap annoying numbertoggle, so it doesn't interfere with yankring
-let g:NumberToggleTrigger = "<F10>"
-
+set backupdir^=$VIMDIR/backup
+set directory^=$VIMDIR/tmp
+if version >= 703
+  set undodir^=$VIMDIR/undo
+endif
 "Where the yankring history file is kept
 let g:yankring_history_dir = $VIMDIR . "/tmp"
 

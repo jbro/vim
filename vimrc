@@ -28,9 +28,9 @@ Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized', Cond(has('gui_running'))
 
 "Airline
-Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' } |
-  Plug 'vim-airline/vim-airline-themes' |
-  Plug 'bling/vim-airline'
+Plug 'bling/vim-airline'
+  Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' }
+  Plug 'vim-airline/vim-airline-themes'
 
 "Change quoting
 Plug 'tpope/vim-surround'
@@ -87,8 +87,8 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'dag/vim-fish', { 'for': 'fish' }
 
 "Puppet
-Plug 'godlygeek/tabular' |
-  Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+  Plug 'godlygeek/tabular'
 
 "Nim
 Plug 'zah/nim.vim', { 'for': 'nim' }

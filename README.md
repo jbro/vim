@@ -1,6 +1,6 @@
 Vim
 ===
-My vimrc etc.
+My vimrc.
 
 Prerequisites
 -------------
@@ -13,6 +13,6 @@ On the terminal do:
     $ touch .vim/enable_ycm # To enable YouCompleteMe
     $ vim
 
-Restart vim and you are good to go
+Restart vim and you are good to go.
 
 

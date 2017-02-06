@@ -71,7 +71,7 @@ Plug 'henrik/vim-indexed-search'
 Plug 'tpope/vim-eunuch'
 
 "Look at all the colours!
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 "Git stuff
 Plug 'tpope/vim-fugitive'

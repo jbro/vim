@@ -73,7 +73,7 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
-"Better search experince
+"Better search experience
 Plug 'junegunn/vim-slash'
 
 "Git stuff

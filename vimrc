@@ -73,11 +73,17 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
+"Better search experince
+Plug 'junegunn/vim-slash'
+
 "Git stuff
 Plug 'tpope/vim-fugitive'
 
 "Scratch buffer
 Plug 'vim-scripts/scratch.vim'
+
+"Visual undo tree
+Plug 'mbbill/undotree'
 
 "Ruby stuff
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }

@@ -78,6 +78,7 @@ Plug 'junegunn/vim-slash'
 
 "Git stuff
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 "Scratch buffer
 Plug 'vim-scripts/scratch.vim'

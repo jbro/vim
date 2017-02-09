@@ -150,7 +150,6 @@ set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 
 set nowrap
 
-set wildmenu
 set wildmode=longest,full
 
 set foldmethod=syntax

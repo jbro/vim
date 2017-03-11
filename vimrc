@@ -99,6 +99,9 @@ Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 "Nim
 Plug 'zah/nim.vim', { 'for': 'nim' }
 
+"Automatic line breaks
+Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+
 call plug#end()
 
 set hidden

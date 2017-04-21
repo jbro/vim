@@ -180,6 +180,3 @@ autocmd FileType gitcommit setlocal spell
 nmap <F1> <nop>
 imap <F1> <nop>
 
-"Testing auto leave insert mode, to discourage moving in insert mode
-au CursorHoldI * stopinsert
-

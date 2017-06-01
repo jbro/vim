@@ -171,6 +171,9 @@ set diffopt+=vertical
 "Insert date
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 
+"Use posix shell highlighting for sh scripts
+let g:is_posix = 1
+
 "Spelling defaults
 set spelllang=en_gb,da
 autocmd BufRead,BufNewFile *.md setlocal spell

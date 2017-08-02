@@ -49,7 +49,8 @@ augroup END
 
 "You complete me
 if !empty(glob($VIMDIR . '/enable_ycm'))
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  let args = join(readfile(glob($VIMDIR . '/enable_ycm')), ' ')
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' . ' ' . args}
 end
 
 "Comment stuff in and out

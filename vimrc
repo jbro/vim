@@ -114,9 +114,6 @@ set visualbell
 
 set number
 
-"Remap annoying numbertoggle, so it doesn't interfere with yankring
-let g:NumberToggleTrigger = "<F10>"
-
 if has('gui_running')
   colorscheme solarized
   set background=dark

@@ -97,7 +97,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-  Plug 'godlygeek/tabular'
 
 "Nim
 Plug 'zah/nim.vim', { 'for': 'nim' }

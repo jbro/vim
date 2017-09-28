@@ -97,6 +97,7 @@ Plug 'dag/vim-fish', { 'for': 'fish' }
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+let g:puppet_align_hashes = 0
 
 "Nim
 Plug 'zah/nim.vim', { 'for': 'nim' }

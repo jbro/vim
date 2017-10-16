@@ -34,6 +34,7 @@ Plug 'bling/vim-airline'
 
 "Change quoting
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 "Don't ruin layout with buffer closes
 Plug 'vim-scripts/kwbdi.vim'

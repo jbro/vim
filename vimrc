@@ -103,6 +103,9 @@ let g:puppet_align_hashes = 0
 "Nim
 Plug 'zah/nim.vim', { 'for': 'nim' }
 
+"Golang
+Plug 'fatih/vim-go'
+
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 

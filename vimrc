@@ -102,7 +102,9 @@ let g:puppet_align_hashes = 0
 
 "Golang
 Plug 'fatih/vim-go', { 'for': 'go' }
-autocmd! User vim-go set nolist
+autocmd! User vim-go
+      \ set nolist |
+      \ let g:go_fmt_command = "goimports"
 
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }

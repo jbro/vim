@@ -109,6 +109,9 @@ autocmd! User vim-go
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
+"JSON
+Plug 'tpope/vim-jdaddy', { 'for': 'json' }
+
 call plug#end()
 
 set hidden

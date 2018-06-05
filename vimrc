@@ -115,6 +115,12 @@ Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 "JSON
 Plug 'tpope/vim-jdaddy', { 'for': 'json' }
 
+"REPL inside vim
+Plug 'jpalardy/vim-slime'
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimshell.vim'
+let g:slime_target = "vimterminal"
+
 call plug#end()
 
 set hidden

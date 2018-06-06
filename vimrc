@@ -93,9 +93,6 @@ Plug 'mbbill/undotree'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 
-"Fish syntax highlighting
-Plug 'dag/vim-fish', { 'for': 'fish' }
-
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 let g:puppet_align_hashes = 0

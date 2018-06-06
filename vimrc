@@ -54,9 +54,6 @@ if !empty(glob($VIMDIR . '/enable_ycm'))
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' . ' ' . args}
 end
 
-"
-Plug 'Shougo/denite.nvim'
-
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'
 

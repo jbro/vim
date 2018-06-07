@@ -97,6 +97,9 @@ Plug 'tpope/vim-endwise', { 'for': 'ruby' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 let g:puppet_align_hashes = 0
 
+"Align on stuff
+Plug 'godlygeek/tabular', { 'for': 'puppet' }
+
 "Golang
 Plug 'fatih/vim-go', { 'for': 'go' }
 autocmd! User vim-go

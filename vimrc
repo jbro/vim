@@ -63,6 +63,20 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "Nice mapping pairs from tpope
 Plug 'tpope/vim-unimpaired'
 
+"Browsing the files
+Plug 'tpope/vim-vinegar'
+function! BDeleteNetrw()
+  for i in range(bufnr('$'), 1, -1)
+    if buflisted(i)
+      if getbufvar(i, 'netrw_browser_active') == 1
+        silent exe 'bdelete ' . i
+      endif
+    endif
+  endfor
+endfunction
+autocmd FileType netrw setl bufhidden=delete
+autocmd BufLeave * call BDeleteNetrw()
+
 "One of the only thins I've missed from Emacs
 Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p $VIMDIR/tmp' }
 "Where the yankring history file is kept

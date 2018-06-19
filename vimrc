@@ -36,8 +36,8 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-"Don't ruin layout with buffer closes
-Plug 'vim-scripts/kwbdi.vim'
+" Keep window layout on bdelete
+Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking
 Plug 'vim-syntastic/syntastic', { 'on': [] }

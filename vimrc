@@ -39,8 +39,8 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-"Don't ruin layout with buffer closes
-Plug 'vim-scripts/kwbdi.vim'
+" Keep window layout on bdelete
+Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking
 Plug 'w0rp/ale'
@@ -59,6 +59,20 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 "Nice mapping pairs from tpope
 Plug 'tpope/vim-unimpaired'
+
+"Browsing the files
+Plug 'tpope/vim-vinegar'
+function! BDeleteNetrw()
+  for i in range(bufnr('$'), 1, -1)
+    if buflisted(i)
+      if getbufvar(i, 'netrw_browser_active') == 1 || bufname(i) == ''
+        silent exe 'bdelete ' . i
+      endif
+    endif
+  endfor
+endfunction
+autocmd FileType netrw setl bufhidden=delete
+autocmd BufEnter * call BDeleteNetrw()
 
 "One of the only thins I've missed from Emacs
 Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p $VIMDIR/tmp' }

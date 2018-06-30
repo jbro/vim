@@ -74,6 +74,9 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
+"Autoclose parantheses
+Plug 'townk/vim-autoclose'
+
 "Better search experience
 Plug 'junegunn/vim-slash'
 

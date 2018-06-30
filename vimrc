@@ -43,13 +43,7 @@ Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/kwbdi.vim'
 
 "Automatic syntax checking
-Plug 'vim-syntastic/syntastic', { 'on': [] }
-"Delay syntatic load until we aren't doing anything
-augroup LazySyntatic
-  autocmd!
-  autocmd CursorHold * :call plug#load('syntastic')
-  autocmd CursorHold * :autocmd! LazySyntatic
-augroup END
+Plug 'w0rp/ale'
 
 "You complete me
 if !empty(glob($VIMDIR . '/enable_ycm'))

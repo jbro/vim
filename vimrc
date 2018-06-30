@@ -89,9 +89,6 @@ Plug 'airblade/vim-gitgutter'
 "Scratch buffer
 Plug 'vim-scripts/scratch.vim'
 
-"Visual undo tree
-Plug 'mbbill/undotree'
-
 "Ruby stuff
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'tpope/vim-endwise', { 'for': 'ruby' }

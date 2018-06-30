@@ -27,6 +27,9 @@ Plug 'tpope/vim-sensible'
 "GUI colour scheme
 Plug 'altercation/vim-colors-solarized', Cond(has('gui_running'))
 
+"TUI colour scheme
+Plug 'morhetz/gruvbox', Cond(!has('gui_running'))
+
 "Airline
 Plug 'bling/vim-airline'
   Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' }
@@ -151,8 +154,9 @@ if has('gui_running')
     set guifont=Roboto\ Mono\ for\ Powerline\ 12
   endif
 else
-  colorscheme desert
-  let g:airline_theme = 'term'
+  colorscheme gruvbox
+  set background=dark
+  let g:airline_theme = 'gruvbox'
   set nocursorline
 endif
 

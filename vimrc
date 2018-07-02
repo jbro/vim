@@ -25,10 +25,10 @@ endfunction
 Plug 'tpope/vim-sensible'
 
 "GUI colour scheme
-Plug 'altercation/vim-colors-solarized', Cond(has('gui_running'))
+Plug 'altercation/vim-colors-solarized'
 
 "TUI colour scheme
-Plug 'morhetz/gruvbox', Cond(!has('gui_running'))
+Plug 'morhetz/gruvbox'
 
 "Airline
 Plug 'bling/vim-airline'

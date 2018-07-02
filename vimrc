@@ -106,7 +106,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/scratch.vim'
 
 "Align on stuff
-Plug 'godlygeek/tabular', { 'for': 'puppet' }
+Plug 'godlygeek/tabular'
 
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }

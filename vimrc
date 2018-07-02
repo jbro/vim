@@ -87,6 +87,9 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
+"Auto end stuff
+Plug 'tpope/vim-endwise'
+
 "Autoclose parantheses
 Plug 'townk/vim-autoclose'
 
@@ -102,16 +105,17 @@ Plug 'airblade/vim-gitgutter'
 "Scratch buffer
 Plug 'vim-scripts/scratch.vim'
 
-"Ruby stuff
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'tpope/vim-endwise', { 'for': 'ruby' }
-
-"Puppet
-Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-let g:puppet_align_hashes = 0
-
 "Align on stuff
 Plug 'godlygeek/tabular', { 'for': 'puppet' }
+
+"Automatic line breaks
+Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+
+"REPL inside vim
+Plug 'jpalardy/vim-slime'
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimshell.vim'
+let g:slime_target = "vimterminal"
 
 "Golang
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -119,17 +123,19 @@ autocmd! User vim-go
       \ set nolist |
       \ let g:go_fmt_command = "goimports"
 
-"Automatic line breaks
-Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+"Ruby
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
-"JSON
-Plug 'tpope/vim-jdaddy', { 'for': 'json' }
+"Python
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
-"REPL inside vim
-Plug 'jpalardy/vim-slime'
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/vimshell.vim'
-let g:slime_target = "vimterminal"
+"Puppet
+Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+let g:puppet_align_hashes = 0
+
+"Support some of all the other languages!
+Plug 'sheerun/vim-polyglot'
+let g:polyglot_disabled = ['go', 'ruby', 'python', 'puppet']
 
 call plug#end()
 

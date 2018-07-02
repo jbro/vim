@@ -207,8 +207,7 @@ let g:is_posix = 1
 
 "Spelling defaults
 set spelllang=en_gb,da
-autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown,gitcommit setlocal spell
 
 "Fat fingers
 nmap <F1> <nop>

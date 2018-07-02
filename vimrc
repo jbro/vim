@@ -45,11 +45,10 @@ Plug 'qpkorr/vim-bufkill'
 "Automatic syntax checking
 Plug 'w0rp/ale'
 
-"You complete me
-if !empty(glob($VIMDIR . '/enable_ycm'))
-  let args = join(readfile(glob($VIMDIR . '/enable_ycm')), ' ')
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' . ' ' . args}
-end
+"Tab completion
+Plug 'maralla/completor.vim'
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

@@ -207,6 +207,9 @@ let g:is_posix = 1
 set spelllang=en_gb,da
 autocmd FileType markdown,gitcommit setlocal spell
 
+"Complete
+set complete=.,w,b,u,t,i,kspell
+
 "Fat fingers
 nmap <F1> <nop>
 imap <F1> <nop>

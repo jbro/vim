@@ -109,6 +109,12 @@ Plug 'godlygeek/tabular'
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
+"Naming things is challenging
+Plug 'Ron89/thesaurus_query.vim', { 'do': 'cd $VIMDIR && curl -o the.zip https://www.openoffice.org/lingucomponent/MyThes-1.zip && unzip the.zip && rm -f the.zip' }
+let g:tq_enabled_backends = [ 'openoffice_en', 'datamuse_com']
+let g:tq_openoffice_en_file = $VIMDIR . '/MyThes-1.0/th_en_US_new'
+let g:tq_online_backends_timeout = 0.4
+
 "REPL inside vim
 Plug 'jpalardy/vim-slime'
 Plug 'Shougo/vimproc.vim'

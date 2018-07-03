@@ -47,8 +47,6 @@ Plug 'w0rp/ale'
 
 "Tab completion
 Plug 'maralla/completor.vim'
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

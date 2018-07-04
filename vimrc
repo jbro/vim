@@ -220,7 +220,3 @@ set complete=.,w,b,u,t,i,kspell
 nmap <F1> <nop>
 imap <F1> <nop>
 
-"Unshift enter command
-nmap ; :
-noremap ;; ;
-

@@ -2,7 +2,7 @@ set nocompatible
 
 "Set $VIMDIR to ~/.vim if unset
 if empty($VIMDIR)
-  let $VIMDIR = glob('~') . '/.vim'
+  let $VIMDIR = glob('~/.vim')
 else
   let g:vimdir = $VIMDIR
 end
@@ -15,12 +15,6 @@ if empty(glob($VIMDIR . '/autoload/plug.vim'))
 endif
 
 call plug#begin($VIMDIR . '/plugged')
-"Trick for conditional activation [https://github.com/junegunn/vim-plug/wiki/faq#conditional-activation]
-function! Cond(cond, ...)
-  let opts = get(a:000, 0, {})
-  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
-endfunction
-
 "Well it's only sensible
 Plug 'tpope/vim-sensible'
 

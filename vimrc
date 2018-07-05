@@ -18,16 +18,12 @@ call plug#begin($VIMDIR . '/plugged')
 "Well it's only sensible
 Plug 'tpope/vim-sensible'
 
-"GUI colour scheme
-Plug 'altercation/vim-colors-solarized'
-
-"TUI colour scheme
+"Colour scheme
 Plug 'morhetz/gruvbox'
 
 "Airline
 Plug 'bling/vim-airline'
   Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' }
-  Plug 'vim-airline/vim-airline-themes'
 
 "Change quoting
 Plug 'tpope/vim-surround'
@@ -147,14 +143,14 @@ set visualbell
 
 set number
 
+colorscheme gruvbox
+set background=dark
+let g:airline_theme = 'gruvbox'
+
+" We have powerline fonts
+let g:airline_powerline_fonts = 1
+
 if has('gui_running')
-  colorscheme solarized
-  set background=dark
-
-  " We have powerline fonts
-  let g:airline_powerline_fonts = 1
-  let g:airline_theme = 'solarized'
-
   "Turn off tool bar
   set guioptions-=T
   "Turn off scrollbar
@@ -168,9 +164,6 @@ if has('gui_running')
     set guifont=Roboto\ Mono\ for\ Powerline\ 12
   endif
 else
-  colorscheme gruvbox
-  set background=dark
-  let g:airline_theme = 'gruvbox'
   set nocursorline
 endif
 

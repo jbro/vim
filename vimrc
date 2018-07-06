@@ -8,8 +8,6 @@ endif
 "Set $VIMDIR to ~/.vim if unset
 if empty($VIMDIR)
   let $VIMDIR = glob('~/.vim')
-else
-  let g:vimdir = $VIMDIR
 end
 
 "Install vimplug, if not present

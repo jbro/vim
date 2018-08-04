@@ -152,7 +152,7 @@ colorscheme gruvbox
 set background=dark
 let g:airline_theme = 'gruvbox'
 
-" We have powerline fonts
+"We have powerline fonts
 let g:airline_powerline_fonts = 1
 
 if has('gui_running')
@@ -164,9 +164,9 @@ if has('gui_running')
   set cursorline
 
   if has("gui_macvim")
-    set guifont=Roboto\ Mono\ Light\ for\ Powerline:h16
+    set guifont=Inconsolata-g\ for\ Powerline:h16
   else
-    set guifont=Roboto\ Mono\ for\ Powerline\ 12
+    set guifont=Inconsolata-g\ for\ Powerline\ 12
   endif
 else
   set nocursorline

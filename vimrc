@@ -51,9 +51,12 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-unimpaired'
 
 "One of the only thins I've missed from Emacs
-Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p $VIMDIR/tmp' }
+" Plug 'vim-scripts/YankRing.vim', { 'do': 'mkdir -p $VIMDIR/tmp' }
 "Where the yankring history file is kept
-let g:yankring_history_dir = $VIMDIR . "/tmp"
+" let g:yankring_history_dir = $VIMDIR . "/tmp"
+
+" Display register content before selecting on
+Plug 'junegunn/vim-peekaboo'
 
 "I like to know far I have to go
 Plug 'henrik/vim-indexed-search'

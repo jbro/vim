@@ -57,6 +57,10 @@ Plug 'tpope/vim-eunuch'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
+"Visual indent level
+Plug 'nathanaelkane/vim-indent-guides'
+autocmd FileType python,json,yaml IndentGuidesEnable
+
 "Auto end stuff
 Plug 'tpope/vim-endwise'
 

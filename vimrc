@@ -113,7 +113,7 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-let g:puppet_align_hashes = 0
+autocmd! User vim-puppet let g:puppet_align_hashes = 0
 
 "Support some of all the other languages!
 Plug 'sheerun/vim-polyglot'

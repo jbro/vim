@@ -109,7 +109,7 @@ autocmd! User vim-go
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 "Python
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'for': 'python' }
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }

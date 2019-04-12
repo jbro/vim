@@ -97,7 +97,6 @@ Plug 'Shougo/vimproc.vim'
 
 "REPL inside vim
 Plug 'jpalardy/vim-slime'
-Plug 'Shougo/vimshell.vim'
 let g:slime_target = "vimterminal"
 
 "Golang

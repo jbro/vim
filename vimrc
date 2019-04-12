@@ -59,6 +59,7 @@ Plug 'junegunn/rainbow_parentheses.vim'
 
 "Visual indent level
 Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_default_mapping = 1
 autocmd FileType python,json,yaml IndentGuidesEnable
 
 "Auto end stuff

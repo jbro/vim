@@ -86,6 +86,9 @@ Plug 'godlygeek/tabular'
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
+"More text objects
+Plug 'wellle/targets.vim'
+
 "Naming things is challenging
 Plug 'Ron89/thesaurus_query.vim', { 'do': 'cd $VIMDIR && curl -o the.zip https://www.openoffice.org/lingucomponent/MyThes-1.zip && unzip the.zip && rm -f the.zip' }
 let g:tq_enabled_backends = [ 'openoffice_en', 'datamuse_com']

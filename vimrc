@@ -129,6 +129,7 @@ set hidden
 set ignorecase
 set smartcase
 set hlsearch
+set showcmd
 
 set visualbell
 

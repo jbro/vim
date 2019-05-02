@@ -27,7 +27,7 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-" Keep window layout on bdelete
+"Keep window layout on bdelete
 Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking

@@ -187,6 +187,9 @@ autocmd FileType markdown,gitcommit setlocal spell
 "Complete
 set complete=.,w,b,u,t,i,kspell
 
+"Search for files recursively
+set path+=**
+
 "Fat fingers
 nmap <F1> <nop>
 imap <F1> <nop>

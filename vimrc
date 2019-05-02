@@ -56,7 +56,7 @@ autocmd FileType python,json,yaml IndentGuidesEnable
 "Auto end stuff
 Plug 'tpope/vim-endwise'
 
-"Autoclose parantheses
+"Auto close parentheses
 Plug 'townk/vim-autoclose'
 
 "Better search experience
@@ -177,7 +177,7 @@ set diffopt+=vertical
 "Insert date
 :inoremap <C-D> <C-R>=strftime("%F")<CR>
 
-"Use posix shell highlighting for sh scripts
+"Use POSIX shell highlighting for sh scripts
 let g:is_posix = 1
 
 "Spelling defaults

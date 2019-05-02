@@ -86,8 +86,9 @@ let g:tq_enabled_backends = [ 'openoffice_en', 'datamuse_com']
 let g:tq_openoffice_en_file = $VIMDIR . '/MyThes-1.0/th_en_US_new'
 let g:tq_online_backends_timeout = 0.4
 
-"Asynchronous execution library for Vim
-Plug 'Shougo/vimproc.vim'
+"File browser
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "REPL inside vim
 Plug 'jpalardy/vim-slime'

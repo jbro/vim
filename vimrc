@@ -57,9 +57,6 @@ Plug 'townk/vim-autoclose'
 "Better search experience
 Plug 'junegunn/vim-slash'
 
-"Sneak up on stuff
-Plug 'justinmk/vim-sneak'
-
 "Git stuff
 Plug 'airblade/vim-gitgutter'
 

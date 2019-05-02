@@ -48,11 +48,6 @@ Plug 'henrik/vim-indexed-search'
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'
 
-"Visual indent level
-Plug 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_default_mapping = 1
-autocmd FileType python,json,yaml IndentGuidesEnable
-
 "Auto end stuff
 Plug 'tpope/vim-endwise'
 
@@ -73,9 +68,6 @@ Plug 'vim-scripts/scratch.vim'
 
 "Align on stuff
 Plug 'godlygeek/tabular'
-
-"Automatic line breaks
-Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
 "More text objects
 Plug 'wellle/targets.vim'
@@ -109,6 +101,15 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 autocmd! User vim-puppet let g:puppet_align_hashes = 0
+
+"Automatic line breaks
+Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+
+"Visual indent level
+Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_default_mapping = 1
+autocmd FileType python,json,yaml IndentGuidesEnable
+
 
 "Support some of all the other languages!
 Plug 'sheerun/vim-polyglot'

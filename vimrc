@@ -33,14 +33,8 @@ Plug 'qpkorr/vim-bufkill'
 "Automatic syntax checking
 Plug 'w0rp/ale'
 
-"Tab completion
-Plug 'maralla/completor.vim'
-
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'
-
-"Toggle line numbers
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 "Nice mapping pairs from tpope
 Plug 'tpope/vim-unimpaired'
@@ -50,9 +44,6 @@ Plug 'junegunn/vim-peekaboo'
 
 "I like to know far I have to go
 Plug 'henrik/vim-indexed-search'
-
-"UNIX stuff directly from Vim
-Plug 'tpope/vim-eunuch'
 
 "Look at all the colours!
 Plug 'junegunn/rainbow_parentheses.vim'

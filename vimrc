@@ -157,6 +157,8 @@ set tabstop=2
 
 set list
 set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
+" Make listchars easier to see
+hi SpecialKey ctermfg=196 guifg=#ff0000
 
 set nowrap
 

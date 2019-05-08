@@ -124,6 +124,8 @@ set showcmd
 set visualbell
 
 set number
+set relativenumber
+
 
 colorscheme gruvbox
 set background=dark

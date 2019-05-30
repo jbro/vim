@@ -99,6 +99,10 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 autocmd! User vim-puppet let g:puppet_align_hashes = 0
 
+"Rust
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+autocmd! User rust.vim let g:rustfmt_autosave = 1
+
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
@@ -110,7 +114,7 @@ autocmd FileType python,json,yaml IndentGuidesEnable
 
 "Support some of all the other languages!
 Plug 'sheerun/vim-polyglot'
-let g:polyglot_disabled = ['go', 'ruby', 'python', 'puppet']
+let g:polyglot_disabled = ['go', 'ruby', 'python', 'puppet', 'rust']
 
 call plug#end()
 

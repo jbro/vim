@@ -83,9 +83,12 @@ let g:slime_target = "vimterminal"
 
 "Golang
 Plug 'fatih/vim-go', { 'for': 'go' }
-autocmd! User vim-go
-      \ set nolist |
-      \ let g:go_fmt_command = "goimports"
+augroup VimGo
+  autocmd!
+  autocmd! User vim-go
+        \ set nolist |
+        \ let g:go_fmt_command = "goimports"
+augroup END
 
 "Ruby
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -95,11 +98,17 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 
 "Puppet
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
-autocmd! User vim-puppet let g:puppet_align_hashes = 0
+augroup VimPuppet
+  autocmd!
+  autocmd! User vim-puppet let g:puppet_align_hashes = 0
+augroup END
 
 "Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-autocmd! User rust.vim let g:rustfmt_autosave = 1
+augroup RustVim
+  autocmd!
+  autocmd! User rust.vim let g:rustfmt_autosave = 1
+augroup END
 
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
@@ -107,7 +116,10 @@ Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 "Visual indent level
 Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_default_mapping = 1
-autocmd FileType python,json,yaml IndentGuidesEnable
+augroup VimIndentGuides
+  autocmd!
+  autocmd FileType python,json,yaml IndentGuidesEnable
+augroup END
 
 
 "Support some of all the other languages!
@@ -160,7 +172,10 @@ set tabstop=2
 set list
 set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
 " Make listchars easier to see
-hi SpecialKey ctermfg=196 guifg=#ff0000
+augroup FixThemeHilight
+  autocmd!
+  autocmd! ColorScheme * highlight SpecialKey ctermfg=196 guifg=#ff0000
+augroup END
 
 set nowrap
 
@@ -186,7 +201,10 @@ let g:is_posix = 1
 
 "Spelling defaults
 set spelllang=en_gb,da
-autocmd FileType markdown,gitcommit setlocal spell
+augroup SpellFileTypes
+  autocmd!
+  autocmd FileType markdown,gitcommit setlocal spell
+augroup END
 
 "Complete
 set complete=.,w,b,u,t,i,kspell

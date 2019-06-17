@@ -213,6 +213,6 @@ set complete=.,w,b,u,t,i,kspell
 set path+=**
 
 "Fat fingers
-nmap <F1> <nop>
-imap <F1> <nop>
+nnoremap <F1> <nop>
+inoremap <F1> <nop>
 

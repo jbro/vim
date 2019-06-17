@@ -1,5 +1,3 @@
-set nocompatible
-
 "Set $VIMDIR to ~/.vim if unset
 if empty($VIMDIR)
   let $VIMDIR = glob('~/.vim')

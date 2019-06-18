@@ -30,6 +30,7 @@ Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking
 Plug 'w0rp/ale'
+let ale_python_flake8_options = "--ignore=E501"
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

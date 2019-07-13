@@ -53,6 +53,11 @@ if executable('cmake')
   let g:ycm_key_list_previous_completion = [ '<Ctrl-p>' ]
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
+  Plug 'SirVer/ultisnips'
+  let g:UltiSnipsExpandTrigger = '<C-j>'
+  let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+  let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+  Plug 'honza/vim-snippets'
 endif
 
 "Comment stuff in and out

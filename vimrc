@@ -25,9 +25,6 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-"Keep window layout on bdelete
-Plug 'qpkorr/vim-bufkill'
-
 "Automatic syntax checking
 Plug 'w0rp/ale'
 let ale_python_flake8_options = "--ignore=E501"

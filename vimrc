@@ -106,6 +106,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 augroup RustVim
   autocmd!
   autocmd! User rust.vim let g:rustfmt_autosave = 1
+  autocmd! FileType rust let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
 "Automatic line breaks

@@ -35,10 +35,12 @@ Plug 'w0rp/ale'
 let ale_python_flake8_options = "--ignore=E501"
 
 
+"Only install YCM if we have cmake installed
 if executable('cmake')
   function! BuildYCM(info)
     let l:install_command = [ '!./install.py' ]
 
+    "Build with Rust support if rustup is availiable
     if executable('rustup')
       call add(l:install_command, '--rust-completer')
     endif
@@ -48,11 +50,13 @@ if executable('cmake')
     endif
   endfunction
 
+  "Completer
   Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
   let g:ycm_key_list_select_completion = [ '<Ctrl-n>' ]
   let g:ycm_key_list_previous_completion = [ '<Ctrl-p>' ]
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
+  "Snippets
   Plug 'SirVer/ultisnips'
   let g:UltiSnipsExpandTrigger = '<C-j>'
   let g:UltiSnipsJumpForwardTrigger = '<C-j>'

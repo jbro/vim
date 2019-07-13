@@ -33,7 +33,7 @@ let ale_python_flake8_options = "--ignore=E501"
 Plug 'tpope/vim-commentary'
 
 "Nice mapping pairs from tpope
-Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-unimpaired'
 
 " Display register content before selecting on
 Plug 'junegunn/vim-peekaboo'

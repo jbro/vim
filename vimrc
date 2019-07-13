@@ -49,6 +49,10 @@ if executable('cmake')
   endfunction
 
   Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+  let g:ycm_key_list_select_completion = [ '<Ctrl-n>' ]
+  let g:ycm_key_list_previous_completion = [ '<Ctrl-p>' ]
+  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_autoclose_preview_window_after_insertion = 1
 endif
 
 "Comment stuff in and out

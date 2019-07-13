@@ -34,6 +34,23 @@ Plug 'tpope/vim-repeat'
 Plug 'w0rp/ale'
 let ale_python_flake8_options = "--ignore=E501"
 
+
+if executable('cmake')
+  function! BuildYCM(info)
+    let l:install_command = [ '!./install.py' ]
+
+    if executable('rustup')
+      call add(l:install_command, '--rust-completer')
+    endif
+
+    if a:info.status != 'unchanged'
+      execute join(l:install_command, ' ')
+    endif
+  endfunction
+
+  Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+endif
+
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'
 

@@ -34,7 +34,6 @@ Plug 'tpope/vim-repeat'
 Plug 'w0rp/ale'
 let ale_python_flake8_options = "--ignore=E501"
 
-
 "Only install YCM if we have cmake installed
 if executable('cmake')
   function! BuildYCM(info)
@@ -69,6 +68,9 @@ Plug 'tpope/vim-commentary'
 
 "Nice mapping pairs from tpope
 " Plug 'tpope/vim-unimpaired'
+
+"Git integration
+Plug 'tpope/vim-fugitive'
 
 " Display register content before selecting on
 Plug 'junegunn/vim-peekaboo'

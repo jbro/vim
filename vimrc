@@ -253,7 +253,7 @@ augroup END
 set complete=.,w,b,u,t,i,kspell
 set completeopt=menuone,noinsert,noselect
 
-"Search for files recursively
+"Search for files recursively using :find
 set path+=**
 
 "Fat fingers

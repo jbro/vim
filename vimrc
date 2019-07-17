@@ -202,6 +202,8 @@ if has('gui_running')
   endif
 else
   set nocursorline
+  "Fix 256 color scheme not coloring lines in terminal
+  set t_ut=
 endif
 
 set expandtab

@@ -251,7 +251,7 @@ augroup END
 
 "Complete
 set complete=.,w,b,u,t,i,kspell
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone
 
 "Search for files recursively using :find
 set path+=**

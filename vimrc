@@ -181,7 +181,11 @@ set visualbell
 set number
 set relativenumber
 
-colorscheme gruvbox
+"Quiet error on installation
+try
+  colorscheme gruvbox
+catch
+endtry
 set background=dark
 let g:airline_theme = 'gruvbox'
 

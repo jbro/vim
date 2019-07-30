@@ -7,7 +7,7 @@ end
 if empty(glob($VIMDIR . '/autoload/plug.vim'))
   silent !curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   call mkdir($VIMDIR . '/spell', 'p')
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin($VIMDIR . '/plugged')
@@ -19,14 +19,16 @@ Plug 'morhetz/gruvbox'
 
 "Airline
 Plug 'bling/vim-airline'
-  Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': './install.sh' }
+function! UpdatePowerlineFonts(info)
+    if a:info.status != 'unchanged'
+      !./install.sh
+    endif
+endfunction
+Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': function('UpdatePowerlineFonts') }
 
 "Change quoting
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-
-"Keep window layout on bdelete
-Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking
 Plug 'w0rp/ale'
@@ -35,11 +37,43 @@ let ale_python_flake8_options = "--ignore=E501,E722"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+"Only install YCM if we have cmake installed
+if executable('cmake')
+  function! BuildYCM(info)
+    let l:install_command = [ '!./install.py' ]
+
+    "Build with Rust support if rustup is availiable
+    if executable('rustup')
+      call add(l:install_command, '--rust-completer')
+    endif
+
+    if a:info.status != 'unchanged'
+      execute join(l:install_command, ' ')
+    endif
+  endfunction
+
+  "Completer
+  Plug 'ycm-core/YouCompleteMe', { 'do': function('BuildYCM') }
+  let g:ycm_key_list_select_completion = [ '<Ctrl-n>' ]
+  let g:ycm_key_list_previous_completion = [ '<Ctrl-p>' ]
+  let g:ycm_autoclose_preview_window_after_completion = 1
+  let g:ycm_autoclose_preview_window_after_insertion = 1
+  "Snippets
+  Plug 'SirVer/ultisnips'
+  let g:UltiSnipsExpandTrigger = '<C-j>'
+  let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+  let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+  Plug 'honza/vim-snippets'
+endif
+
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'
 
 "Nice mapping pairs from tpope
-Plug 'tpope/vim-unimpaired'
+" Plug 'tpope/vim-unimpaired'
+
+"Git integration
+Plug 'tpope/vim-fugitive'
 
 " Display register content before selecting on
 Plug 'junegunn/vim-peekaboo'
@@ -72,7 +106,12 @@ Plug 'godlygeek/tabular'
 Plug 'wellle/targets.vim'
 
 "Naming things is challenging
-Plug 'Ron89/thesaurus_query.vim', { 'do': 'cd $VIMDIR && curl -o the.zip https://www.openoffice.org/lingucomponent/MyThes-1.zip && unzip the.zip && rm -f the.zip' }
+function UpdatetThesaurus(info)
+  if a:info.status == 'installed'
+    execute '!cd $VIMDIR && curl -o the.zip https://www.openoffice.org/lingucomponent/MyThes-1.zip && unzip -o the.zip && rm -f the.zip'
+  endif
+endfunction
+Plug 'Ron89/thesaurus_query.vim', { 'do': function('UpdatetThesaurus') }
 let g:tq_enabled_backends = [ 'openoffice_en', 'datamuse_com']
 let g:tq_openoffice_en_file = $VIMDIR . '/MyThes-1.0/th_en_US_new'
 let g:tq_online_backends_timeout = 0.4
@@ -112,6 +151,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 augroup RustVim
   autocmd!
   autocmd! User rust.vim let g:rustfmt_autosave = 1
+  autocmd! FileType rust let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
 "Automatic line breaks
@@ -144,8 +184,11 @@ set visualbell
 set number
 set relativenumber
 
-
-colorscheme gruvbox
+"Quiet error on installation
+try
+  colorscheme gruvbox
+catch
+endtry
 set background=dark
 let g:airline_theme = 'gruvbox'
 
@@ -167,6 +210,8 @@ if has('gui_running')
   endif
 else
   set nocursorline
+  "Fix 256 color scheme not coloring lines in terminal
+  set t_ut=
 endif
 
 set expandtab
@@ -212,8 +257,9 @@ augroup END
 
 "Complete
 set complete=.,w,b,u,t,i,kspell
+set completeopt=menuone
 
-"Search for files recursively
+"Search for files recursively using :find
 set path+=**
 
 "Fat fingers

@@ -30,7 +30,10 @@ Plug 'qpkorr/vim-bufkill'
 
 "Automatic syntax checking
 Plug 'w0rp/ale'
-let ale_python_flake8_options = "--ignore=E501"
+"Ignore long lines and bare excepts are OK
+let ale_python_flake8_options = "--ignore=E501,E722"
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'

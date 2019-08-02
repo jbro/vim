@@ -89,6 +89,8 @@ Plug 'tpope/vim-endwise'
 
 "Auto close parentheses
 Plug 'townk/vim-autoclose'
+" Fix omkompatibilyt with YCM
+let g:AutoClosePumvisible = {"ENTER": "", "ESC": ""}
 
 "Better search experience
 Plug 'junegunn/vim-slash'

@@ -31,7 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 "Automatic syntax checking
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 "Ignore long lines and bare excepts are OK
 let ale_python_flake8_options = "--ignore=E501,E722"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)

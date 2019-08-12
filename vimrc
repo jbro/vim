@@ -156,6 +156,16 @@ augroup RustVim
   autocmd! FileType rust let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
+"Racket
+Plug 'wlangstroth/vim-racket', { 'for': 'racket' }
+Plug 'tpope/vim-sexp-mappings-for-regular-people', { 'for': 'racket' }
+Plug 'guns/vim-sexp', { 'for': 'racket' }
+augroup Racket
+  autocmd filetype racket
+        \ set lisp |
+        \ set autoindent
+augroup END
+
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
@@ -170,7 +180,7 @@ augroup END
 
 "Support some of all the other languages!
 Plug 'sheerun/vim-polyglot'
-let g:polyglot_disabled = ['go', 'ruby', 'python', 'puppet', 'rust']
+let g:polyglot_disabled = ['go', 'ruby', 'python', 'puppet', 'rust', 'racket' ]
 
 call plug#end()
 

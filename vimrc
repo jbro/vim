@@ -163,7 +163,8 @@ Plug 'guns/vim-sexp', { 'for': 'racket' }
 augroup Racket
   autocmd filetype racket
         \ set lisp |
-        \ set autoindent
+        \ set autoindent |
+        \ :RainbowParentheses
 augroup END
 
 "Automatic line breaks

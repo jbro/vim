@@ -164,7 +164,8 @@ augroup Racket
   autocmd filetype racket
         \ set lisp |
         \ set autoindent |
-        \ :RainbowParentheses
+        \ :RainbowParentheses |
+        \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
 "Automatic line breaks

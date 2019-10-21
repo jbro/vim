@@ -40,7 +40,7 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 "Only install YCM if we have cmake installed
 if executable('cmake')
   function! BuildYCM(info)
-    let l:install_command = [ '!./install.py' ]
+    let l:install_command = [ '!python3 install.py' ]
 
     "Build with Rust support if rustup is availiable
     if executable('rustup')

@@ -19,12 +19,26 @@ Plug 'morhetz/gruvbox'
 
 "Airline
 Plug 'bling/vim-airline'
+
 function! UpdatePowerlineFonts(info)
     if a:info.status != 'unchanged'
       !./install.sh
     endif
 endfunction
 Plug 'powerline/fonts', { 'dir': $VIMDIR . '/fonts/powerline', 'do': function('UpdatePowerlineFonts') }
+
+function! UpdateJetBrainsMono(info)
+    if a:info.status != 'unchanged'
+      let os = substitute(system('uname'), '\n', '', '')
+      if os == 'Linux'
+        !cp ttf/*.ttf "$HOME/.local/share/fonts"
+        !fc-cache -f "$HOME/.local/share/fonts"
+      elseif os == 'Darwin'
+        !cp ttf/*.ttf "$HOME/Library/Fonts"
+      endif
+    endif
+endfunction
+Plug 'JetBrains/JetBrainsMono', { 'dir': $VIMDIR . '/fonts/jetbrainsmono', 'do': function('UpdateJetBrainsMono') }
 
 "Change quoting
 Plug 'tpope/vim-surround'
@@ -218,9 +232,9 @@ if has('gui_running')
   set cursorline
 
   if has("gui_macvim")
-    set guifont=Inconsolata-g\ for\ Powerline:h16
+    set guifont=JetBrains\Mono\ Medium:h16
   else
-    set guifont=Inconsolata-g\ for\ Powerline\ 12
+    set guifont=JetBrains\ Mono\ Medium\ 12
   endif
 else
   set nocursorline

@@ -234,7 +234,7 @@ if has('gui_running')
   if has("gui_macvim")
     set guifont=JetBrains\Mono\ Medium:h16
   else
-    set guifont=JetBrains\ Mono\ Medium\ 12
+    set guifont=JetBrains\ Mono\ Medium\ 13
   endif
 else
   set nocursorline

@@ -7,6 +7,9 @@ end
 if empty(glob($VIMDIR . '/autoload/plug.vim'))
   silent !curl -fLo $VIMDIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   call mkdir($VIMDIR . '/spell', 'p')
+  call mkdir($VIMDIR . '/undo', 'p')
+  call mkdir($VIMDIR . '/tmp', 'p')
+  call mkdir($VIMDIR . '/backup', 'p')
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 

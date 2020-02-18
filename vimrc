@@ -54,12 +54,12 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 "Only install YCM if we have cmake installed
 if executable('cmake')
   function! BuildYCM(info)
-    let l:install_command = [ '!python3 install.py --system-boost' ]
+    let l:install_command = [ '!python3 install.py --system-boost --all' ]
 
     "Build with Rust support if rustup is availiable
-    if executable('rustup')
-      call add(l:install_command, '--rust-completer')
-    endif
+    "if executable('rustup')
+    "  call add(l:install_command, '--rust-completer')
+    "endif
 
     if a:info.status != 'unchanged'
       execute join(l:install_command, ' ')

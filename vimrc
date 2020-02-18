@@ -270,6 +270,9 @@ if version >= 703
   set undodir^=$VIMDIR/undo
 endif
 
+"Persistent undo
+set undofile
+
 "Force diff to use vertical split
 set diffopt+=vertical
 

@@ -51,8 +51,8 @@ Plug 'tpope/vim-repeat'
 Plug 'dense-analysis/ale'
 "Ignore long lines and bare excepts are OK
 let ale_python_flake8_options = "--ignore=E501,E722"
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nnoremap <silent> <C-k> <Plug>(ale_previous_wrap)
+nnoremap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "Only install YCM if we have cmake installed
 if executable('cmake')
@@ -94,6 +94,9 @@ Plug 'tpope/vim-fugitive'
 
 " Display register content before selecting on
 Plug 'junegunn/vim-peekaboo'
+
+"Visual undo tree
+Plug 'mbbill/undotree'
 
 "I like to know far I have to go
 Plug 'henrik/vim-indexed-search'

@@ -51,6 +51,8 @@ Plug 'tpope/vim-repeat'
 Plug 'dense-analysis/ale'
 "Ignore long lines and bare excepts are OK
 let ale_python_flake8_options = "--ignore=E501,E722"
+let ale_puppet_puppetlint_options = '--no-140chars-check --no-arrow-alignment-check'
+let ale_linters = { 'puppet': [ 'puppet', 'puppetlint' ] }
 nnoremap <silent> <C-k> <Plug>(ale_previous_wrap)
 nnoremap <silent> <C-j> <Plug>(ale_next_wrap)
 

@@ -79,10 +79,9 @@ if executable('cmake')
   let g:ycm_autoclose_preview_window_after_insertion = 1
   "Snippets
   Plug 'SirVer/ultisnips'
-  let g:UltiSnipsExpandTrigger = '<C-j>'
-  let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-  let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+  let g:UltiSnipsExpandTrigger="<c-j>"
   Plug 'honza/vim-snippets'
+  let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', '~/.vim/plugged/vim-snippets/UltiSnips']
 endif
 
 "Comment stuff in and out

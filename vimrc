@@ -1,6 +1,10 @@
-"Set $VIMDIR to ~/.vim if unset
+"Set $VIMDIR if unset
 if empty($VIMDIR)
-  let $VIMDIR = glob('~/.vim')
+  if has('nvim')
+    let $VIMDIR = glob('~/.config/nvim')
+  else
+    let $VIMDIR = glob('~/.vim')
+  end
 end
 
 "Install vimplug, if not present
@@ -247,6 +251,15 @@ else
   set nocursorline
   "Fix 256 color scheme not coloring lines in terminal
   set t_ut=
+
+  "neovim specifics
+  if has('nvim')
+    "Don't change cursor shape in neovim
+    set guicursor=
+    "Use 'correct' colors in term
+    set termguicolors
+endif
+
 endif
 
 set expandtab

@@ -267,12 +267,7 @@ set shiftwidth=2
 set tabstop=2
 
 set list
-set listchars=tab:→\ ,trail:·,extends:<,precedes:>,nbsp:␣
-" Make listchars easier to see
-augroup FixThemeHilight
-  autocmd!
-  autocmd! ColorScheme * highlight SpecialKey ctermfg=196 guifg=#ff0000
-augroup END
+set listchars=tab:→\ ,trail:·,nbsp:␣
 
 set nowrap
 

@@ -132,6 +132,13 @@ Plug 'godlygeek/tabular'
 "More text objects
 Plug 'wellle/targets.vim'
 
+"Highligh trailing whitespace
+Plug 'ntpeters/vim-better-whitespace'
+augroup BetterWhitespace
+  autocmd!
+  autocmd! User vim-better-whitespace highlight! link ExtraWhitespace QuickFixLine
+augroup END
+
 "Naming things is challenging
 function UpdatetThesaurus(info)
   if a:info.status == 'installed'

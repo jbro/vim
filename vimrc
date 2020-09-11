@@ -132,13 +132,6 @@ Plug 'godlygeek/tabular'
 "More text objects
 Plug 'wellle/targets.vim'
 
-"Highligh trailing whitespace
-Plug 'ntpeters/vim-better-whitespace'
-augroup BetterWhitespace
-  autocmd!
-  autocmd! User vim-better-whitespace highlight! link ExtraWhitespace QuickFixLine
-augroup END
-
 "Naming things is challenging
 function UpdatetThesaurus(info)
   if a:info.status == 'installed'
@@ -232,6 +225,15 @@ set relativenumber
 
 "Quiet error on installation
 try
+  "Override highligthing of trailing spaces
+  augroup HLtrailing
+    autocmd!
+    if has('nvim')
+      autocmd ColorScheme * highlight link Whitespace Error
+    else
+      autocmd ColorScheme * highlight link SpecialKey Error
+    end
+  augroup END
   colorscheme gruvbox
 catch
 endtry

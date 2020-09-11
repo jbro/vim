@@ -155,7 +155,7 @@ let g:slime_target = "vimterminal"
 Plug 'fatih/vim-go', { 'for': 'go' }
 augroup VimGo
   autocmd!
-  autocmd! User vim-go
+  autocmd User vim-go
         \ set nolist |
         \ let g:go_fmt_command = "goimports"
 augroup END
@@ -170,15 +170,16 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
 augroup VimPuppet
   autocmd!
-  autocmd! User vim-puppet let g:puppet_align_hashes = 0
+  autocmd User vim-puppet let g:puppet_align_hashes = 0
 augroup END
 
 "Rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 augroup RustVim
   autocmd!
-  autocmd! User rust.vim let g:rustfmt_autosave = 1
-  autocmd! FileType rust let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
+  autocmd User rust.vim
+        \ let g:rustfmt_autosave = 1 |
+        \ FileType rust let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
 "Racket

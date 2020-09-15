@@ -198,6 +198,12 @@ augroup END
 
 "Automatic line breaks
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
+augroup MarkdownPencil
+  autocmd!
+  autocmd User vim-pencil
+        \ Pencil
+augroup END
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
 "Visual indent level
 Plug 'nathanaelkane/vim-indent-guides'

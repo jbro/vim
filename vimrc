@@ -65,11 +65,6 @@ if executable('cmake')
   function! BuildYCM(info)
     let l:install_command = [ '!python3 install.py --system-boost --all' ]
 
-    "Build with Rust support if rustup is availiable
-    "if executable('rustup')
-    "  call add(l:install_command, '--rust-completer')
-    "endif
-
     if a:info.status != 'unchanged'
       execute join(l:install_command, ' ')
     endif
@@ -92,9 +87,6 @@ endif
 
 "Comment stuff in and out
 Plug 'tpope/vim-commentary'
-
-"Nice mapping pairs from tpope
-" Plug 'tpope/vim-unimpaired'
 
 "Git integration
 Plug 'tpope/vim-fugitive'

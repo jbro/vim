@@ -210,7 +210,8 @@ Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_default_mapping = 1
 augroup VimIndentGuides
   autocmd!
-  autocmd FileType python,json,yaml IndentGuidesEnable
+  autocmd FileType python,json,yaml
+        \ IndentGuidesEnable
 augroup END
 
 

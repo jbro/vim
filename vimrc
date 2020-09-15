@@ -81,6 +81,8 @@ if executable('cmake')
   let g:ycm_key_list_previous_completion = [ '<Ctrl-p>' ]
   let g:ycm_autoclose_preview_window_after_completion = 1
   let g:ycm_autoclose_preview_window_after_insertion = 1
+  "Avoid peekaboo crash with YCM
+  let g:ycm_filetype_blacklist = { 'peekaboo': 1 }
   "Snippets
   Plug 'SirVer/ultisnips'
   let g:UltiSnipsExpandTrigger="<c-j>"

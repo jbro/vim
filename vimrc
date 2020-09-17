@@ -188,14 +188,16 @@ augroup Racket
         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 augroup END
 
-"Automatic line breaks
+"Markdown
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 augroup MarkdownPencil
   autocmd!
   autocmd User vim-pencil
-        \ Pencil
+        \ let g:pencil#conceallevel = 0 |
+        \ let g:airline_section_x = '%{PencilMode()}' |
+        \ :call pencil#init({'wrap': 'hard', 'autoformat': 0})
 augroup END
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
 "Visual indent level
 Plug 'nathanaelkane/vim-indent-guides'

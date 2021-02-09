@@ -38,10 +38,10 @@ function! UpdateJetBrainsMono(info)
     if a:info.status != 'unchanged'
       let os = substitute(system('uname'), '\n', '', '')
       if os == 'Linux'
-        !cp ttf/*.ttf "$HOME/.local/share/fonts"
+        !cp fonts/ttf/*.ttf "$HOME/.local/share/fonts"
         !fc-cache -f "$HOME/.local/share/fonts"
       elseif os == 'Darwin'
-        !cp ttf/*.ttf "$HOME/Library/Fonts"
+        !cp fonts/ttf/*.ttf "$HOME/Library/Fonts"
       endif
     endif
 endfunction

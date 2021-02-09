@@ -161,7 +161,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
 
 "Puppet
-Plug 'rodjek/vim-puppet', { 'for': 'puppet' }
+Plug 'rodjek/vim-puppet' ", { 'for': 'puppet' }
 augroup VimPuppet
   autocmd!
   autocmd User vim-puppet let g:puppet_align_hashes = 0

@@ -47,9 +47,8 @@ function! UpdateJetBrainsMono(info)
 endfunction
 Plug 'JetBrains/JetBrainsMono', { 'dir': $VIMDIR . '/fonts/jetbrainsmono', 'do': function('UpdateJetBrainsMono') }
 
-"Change quoting
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+"Operate on sandwiches
+Plug 'machakann/vim-sandwich'
 
 "Automatic syntax checking
 Plug 'dense-analysis/ale'

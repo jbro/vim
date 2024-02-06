@@ -300,9 +300,6 @@ set undofile
 "Force diff to use vertical split
 set diffopt+=vertical
 
-"Insert date
-:inoremap <C-D> <C-R>=strftime("%F")<CR>
-
 "Use POSIX shell highlighting for sh scripts
 let g:is_posix = 1
 

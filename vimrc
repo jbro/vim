@@ -300,9 +300,6 @@ set undofile
 "Force diff to use vertical split
 set diffopt+=vertical
 
-"Use POSIX shell highlighting for sh scripts
-let g:is_posix = 1
-
 "Spelling defaults
 set spelllang=en_gb,da
 augroup SpellFileTypes

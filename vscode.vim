@@ -32,6 +32,10 @@ Plug 'junegunn/vim-slash'
 "More text objects
 Plug 'wellle/targets.vim'
 
+"Line numbers
+set number
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 call plug#end()
 
 " Commentry like behaviour

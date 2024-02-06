@@ -50,6 +50,10 @@ Plug 'JetBrains/JetBrainsMono', { 'dir': $VIMDIR . '/fonts/jetbrainsmono', 'do':
 "Operate on sandwiches
 Plug 'machakann/vim-sandwich'
 
+"Line numbers
+set number
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
 "Automatic syntax checking
 Plug 'dense-analysis/ale'
 "Ignore long lines and bare excepts are OK
@@ -222,9 +226,6 @@ set hlsearch
 set showcmd
 
 set visualbell
-
-set number
-set relativenumber
 
 "Quiet error on installation
 try

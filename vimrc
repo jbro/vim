@@ -227,6 +227,8 @@ set showcmd
 
 set visualbell
 
+set mouse=
+
 "Quiet error on installation
 try
   "Override highligthing of trailing spaces

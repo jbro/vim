@@ -304,6 +304,9 @@ set undofile
 set diffopt+=vertical
 
 "Spelling defaults
+if has('nvim')
+  lua require('nvim.spellfile').config({ timeout_ms = 60000 })
+endif
 set spelllang=en_gb,da
 augroup SpellFileTypes
   autocmd!

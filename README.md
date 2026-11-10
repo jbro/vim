@@ -1,20 +1,15 @@
-Vim
-===
-My vimrc.
+## Prerequisites
 
-Prerequisites
--------------
+- Neovim 0.12 or newer
+- Git
+- Go and gopls on PATH
+- Tree-sitter CLI 0.26.1 or newer
+- A C compiler, curl, and tar
+- A true-color terminal with a Nerd Font
 
-Installation
-------------
-On the terminal do:
+## Installation
 
-For vim:
-
-    $ git clone https://github.com/jbro/vim.git .vim
-    $ vim
-
-For neovim:
-
-    $ git clone https://github.com/jbro/vim.git .config/nvim
-    $ nvim
+```sh
+git clone https://github.com/jbro/vim.git ~/.config/nvim
+nvim
+```
